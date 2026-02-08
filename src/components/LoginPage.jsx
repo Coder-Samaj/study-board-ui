@@ -1,5 +1,6 @@
 import { FaUser, FaLock } from "react-icons/fa";
 import VIDEO from "../assets/Mars_Rotation_Web_HB_d96299f9de.mp4";
+import { Link } from "react-router-dom";
 
 const LoginPage = () => {
   return (
@@ -59,7 +60,7 @@ const LoginPage = () => {
 
               <p style={styles.registerText}>
                 Don&apos;t have an account?{" "}
-                <a href="#" style={styles.linkBold}>Register</a>
+                <Link to="/register" style={styles.linkBold}>Register</Link>
               </p>
             </form>
           </div>
