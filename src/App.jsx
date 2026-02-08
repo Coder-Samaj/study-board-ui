@@ -1,11 +1,15 @@
 import { Button, Typography } from '@mui/material'
+import { Navigate, Route, Routes } from 'react-router-dom'
+import LoginPage from './components/LoginPage'
+import RegisterPage from './components/RegisterPage'
 
 function App() {
   return (
-    <>
-      <Typography variant="h2">MUI works</Typography>
-      <Button variant="outlined" onClick={()=>{console.log("wow")}}>Click me</Button>
-    </>
+    <Routes>
+      <Route path="/" element={<Navigate to="/login"/>} />
+      <Route path="/login" element={<LoginPage/>} />
+      <Route path="/register" element={<RegisterPage/>} />
+    </Routes>
   )
 }
 
